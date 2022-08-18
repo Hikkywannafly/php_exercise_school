@@ -1,0 +1,1 @@
+<?= 'xin chao thay co va cac ban' ?>
