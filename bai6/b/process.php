@@ -1,5 +1,5 @@
 <?php
-$n = $_POST["so_phan_tu"];
+$n = isset($_POST["so_phan_tu"]) ? $_POST["so_phan_tu"] : 0;
 $mang_so = array($n);
 for ($i = 0; $i < $n; $i++) {
     $mang_so[$i] = mt_rand(0, 20);
