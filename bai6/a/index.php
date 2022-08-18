@@ -1,5 +1,13 @@
 <?php
-require_once('process.php');
+$ket_qua = 0;
+$mang_so = 0;
+if (isset($_POST['btn_goi'])) {
+    $mang_so = explode(",", $_POST['nhap_mang']);
+    $n = count($mang_so);
+    for ($i = 0; $i < $n; $i++) {
+        $ket_qua += $mang_so[$i];
+    }
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -36,7 +44,8 @@ require_once('process.php');
             <tbody>
                 <tr>
                     <td>Nhập dãy số:</td>
-                    <td><input type="text" name="nhap_mang" value="<?php echo $_POST['nhap_mang'] ?>"></td>
+                    <td><input type="text" name="nhap_mang"
+                            value="<?php if (isset($_POST['nhap_mang'])) echo $_POST['nhap_mang'];  ?>"></td>
                 </tr>
                 <tr>
                     <td></td>
